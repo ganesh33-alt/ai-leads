@@ -55,7 +55,7 @@
             <!-- Compiler Plugin to specify Java version -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-pl
+                <artifactId>maven-compiler-pl>
                 </plugin>
         </plugins>
     </build>
