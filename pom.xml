@@ -16,13 +16,6 @@
     <url>http://www.example.com</url>
     <description>My Maven Project</description>
 
-    <!-- Parent POM (optional, can define common configurations for multiple projects) -->
-    <!-- <parent>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.0</version>
-    </parent> -->
-
     <!-- Repositories (where to fetch dependencies from) -->
     <repositories>
         <repository>
@@ -41,7 +34,7 @@
             <scope>test</scope>
         </dependency>
         
-        <!-- Example of adding another library (e.g., Apache Commons Lang) -->
+        <!-- Apache Commons Lang for utility functions -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -49,15 +42,28 @@
         </dependency>
     </dependencies>
 
-    <!-- Build Settings (plugins, compiler version, etc.) -->
+    <!-- Build Settings -->
     <build>
-    <plugins>
-        <!-- Compiler Plugin to specify Java version -->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId> <!-- Fix: Properly close the tag -->
-        </plugin>
-    </plugins>
-</build>
+        <plugins>
+            <!-- Compiler Plugin to specify Java version -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- Properties (optional but useful for maintaining consistency) -->
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
 </project>
+
 
